@@ -10,13 +10,66 @@
         <script src="scripts/jquery/3.2.1/jquery.min.js"></script>
         <link href="bootsrap/3.3.7/css/boostrap.min.css" rel="stylesheet">
         <script src="bootstrap/js/bootsrap.js"></script>
-        <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans+Condensed:300" rel="stylesheet">
+        <script>    
+            $(function(){
+                    $('#alertMe,#alertLink').click(function(e){
+                        e.preventDefault();
+                        $('#successAlert').slideDown();
+                        alert("Sorry!!! Not enough to know enough about me for now. Let's wait!!!")
+                    });
+                    $('#a1').click(function(e){
+                        e.preventDefault();
+                        $('#s1').slideDown();
+                    });
+                    $('#a2').click(function(e){
+                        e.preventDefault();
+                        $('#s2').slideDown();
+                    });
+                    $('#a3').click(function(e){
+                        e.preventDefault();
+                        $('#s3').slideDown();
+                    });
+                    $('#a4').click(function(e){
+                        e.preventDefault();
+                        $('#s4').slideDown();
+                    });
+                    $('#a5').click(function(e){
+                        e.preventDefault();
+                        $('#s5').slideDown();
+                    });
+            });
+        </script>
+            <style>
+                .alert{
+                display: none;
+            }
+                .well > .page-Header{
+                    margin-top:none;
+                }
+                .panel-header{
+                    background-color:gold;
+                    text-align:center;
+                    padding:15px 15px 15px 15px;
+                    height:50px;
+                }
+                .panel > img {
+                    margin:9px 9px 9px 9px
+                }
+                .panel > .btn {
+                    text-align:center;
+                    position:center;
+                }
+                .panel{
+                    background-color:cadetblue;
+                }
+            </style>
     </head>
-    <body style="background-color:rgb(200,200,200);">
+    <body style="background-color:darkolivegreen">
         <div class="conatainer">
             <nav class="navbar navbar-inverse navbar-full" style="border:none;background-color:black;">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="myNavbar">
+                <div class="navbar-header" style="margin-right:40px;padding-bottom:none;">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -78,21 +131,81 @@
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
-                <div class="row" style="margin-right:50px;margin-left:50px;margin-top:20px;margin-bottom:20px;" height="200">
-                    <div class="col-lg-10">
-                        <div class="well" style="padding:none;margin:none;background-color:cadetblue;">
-                            <div class="page-header" style="padding:none;">
-                                <h1>AKASH BHARDWAJ</h1>
+                <div class="row" style="height:400px;">
+                    <div class="col-lg-4" style="margin-left:45px;margin-right:none;">
+                        <img src="images/family.jpg" class="img-responsive img-thumbnail" style="height:400px;width:600px;">
+                    </div>
+                    <div class="col-lg-7" style="margin-left:36px;">
+                        <div class="well" style="padding:none;background-color:lightgreen;border:none;height:400px;font-family: 'Open Sans Condensed', sans-serif;
+font-family: 'Lobster', cursive;">
+                            <div class="page-header" style="padding:none;margin-top:none;margin-right:20px;border:none;">
+                                <h1><b>AKASH BHARDWAJ</b></h1></div>
                                 <p class="lead">My Current Academic Status</p>
-                                <p>I am currently undergoing a 4 year Batchelor of Technology programme in the department of<br> 
-                                    Electrical Engineering at IIT Kanpur. A man full of dreams and hunger for even the<br>
-                                    slightest of opportunity to learn am someone who outlives his very own existence with the<br> 
-                                    dedication to get better and better and better.</p>
-                            </div>
+                                <p><b>I    am    currently    undergoing    a    4    year    Batchelor    of    Technology    programme    in    the    department    of <br> 
+                                    Electrical    Engineering    at    IIT    Kanpur .   A    man    full    of    dreams    and    hunger    for    even    the <br>
+                                    slightest    of    opportunity    to    learn    am    someone    who    outlives    his    very    own    existence    with    the <br> 
+                                    dedication    to    get    better    and    better    and    better .</p>
+                                    <hr>
+                                <button class="btn btn-danger btn-large" id="alertMe">Click To Know More About Me</button>
+                                <button class="btn btn-danger btn-link" id="alertLink">Or click a secondary link</button> 
                         </div>
                     </div>
-                    <div class="col-lg-2">
-                        <img src="images/IMG-20161108-WA0003.jpg" class="img-responsive img-circle" width="172" height="200">
+                </div>
+                <div class="alert alert-success alert-dismissable" style="margin-top:20px;margin-right:50px;margin-left:50px;" id="s1">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-success alert-dismissable" style="margin-top:20px;margin-right:50px;margin-left:50px;" id="s2">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-success alert-dismissable" style="margin-top:20px;margin-right:50px;margin-left:50px;" id="s3">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-success alert-dismissable" style="margin-top:20px;margin-right:50px;margin-left:50px;" id="s4">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="alert alert-success alert-dismissable" style="margin-top:20px;margin-right:50px;margin-left:50px;" id="s5"> 
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    <strong>Success!</strong> Indicates a successful or positive action.
+                </div>
+                <div class="row">
+                    <div class="col-lg-2" style="margin-right:39px;margin-left:50px;">
+                        <div class="panel panel-danger">
+                            <div class="panel-header"><b>Gajendra Meena</b></div>
+                            <img src="images/gajju.jpg" class="img-responsive img-circle" width="200">
+                            <button class="btn btn-danger btn-large btn-group-justified" id="a1">Click To Know More About<br>Gajendra</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2" style="margin-right:39px;">
+                        <div class="panel panel-danger">
+                            <div class="panel-header"><b>Dhananjay Bagul</b></div>
+                            <img src="images/dhanno.jpg" class="img-responsive img-circle" width="200">
+                            <button class="btn btn-danger btn-large btn-group-justified" id="a2">Click To know More About<br>Dhananjay</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2" style="margin-right:39px;">
+                        <div class="panel panel-danger">
+                            <div class="panel-header"><b>Harshvardhan Munda</b></div>
+                            <img src="images/munda.jpg" class="img-responsive img-circle" width="200">
+                            <button class="btn btn-danger btn-large btn-group-justified" id="a3">Click To Know More About<br>Harsh</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2" style="margin-right:39px;">
+                        <div class="panel panel-danger">
+                            <div class="panel-header"><b>Varan Agarwal</b></div>
+                            <img src="images/varan.jpg" class="img-respons4ve img-circle" width="200">
+                            <button class="btn btn-danger btn-large btn-group-justified" id="a4">Click To Know More About<br>Varan</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-2" style="margin-right:45px;">
+                        <div class="panel panel-danger">
+                            <div class="panel-header"><b>Malik Faisal Nissar</b></div>
+                            <img src="images/faisal.jpg" class="img-responsive img-circle" width="200">
+                            <button class="btn btn-danger btn-large btn-group-justified" id="a5">Click To Know More About<br>Faisal</button>
+                        </div>
                     </div>
                 </div>
         </div>
